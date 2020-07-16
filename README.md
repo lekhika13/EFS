@@ -23,7 +23,7 @@ DEPLOYMENT OF EFS ON AWS
 Terraform apply:
 <img src ="SCREENSHOTS/12.PNG" >
 
-## _STEP 1: Here I am using AWS and select the region ap-south-1(Mumbai)_
+## _STEP 1:Here I am using AWS and select the region ap-south-1(Mumbai)_
  Configure the AWS Provider
  
     #---------------------------------selecting our region for instance-----------
@@ -33,7 +33,7 @@ Terraform apply:
     }
 
 
-## _STEP 2: Creating the key pair_ :-
+## _STEP 2:Creating the key pair_ :-
 Amazon EC2 uses public key cryptography to encrypt and decrypt login information. Public key cryptography uses a public key to encrypt a piece of data, and then the recipient uses the private key to decrypt the data. The public and private keys are known as a key pair
 
 Here I am creating a new key-pair ..........................
@@ -50,7 +50,7 @@ Here I am creating a new key-pair ..........................
       public_key = tls_private_key.privatekey.public_key_openssh
     }
 
-## _STEP 3: Security group_ :-
+## _STEP 3:Security group_ :-
 A security group acts as a virtual firewall for your instance to control incoming and outgoing traffic. Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. When you launch an instance, you can specify one or more security groups; otherwise, Amazon EC2 uses the default security group. 
 
     #----------------------------------creating security group--------------------
@@ -91,9 +91,12 @@ A security group acts as a virtual firewall for your instance to control incomin
         }
   
  <img src ="SCREENSHOTS/11.PNG" >
-## _Step 4 : Creating a instance_ :-
+
+## _Step 4:Creating a instance_ :-
+
 Amazon EC2 provides different instance types to enable you to choose the CPU, memory, storage, and networking capacity that you need to run your applications
 In this step I have created a instance . And login into the instance and install some softwares....
+
 ## _Step 5_:
 The null_resource resource implements the standard resource lifecycle but takes no further action.
 Here I am mount the volume /var/www/html ,which are creating above into /var/www/html
@@ -207,6 +210,7 @@ Here I am going to create EFS....
 <img src ="SCREENSHOTS/4.PNG" >
 <img src ="SCREENSHOTS/3.PNG" >
 <img src ="SCREENSHOTS/19.PNG" >
+
 ## _STEP 6: S3 Bucket and code-pipeline_ :-
 Here I have created S3 storage
 git clone folder
